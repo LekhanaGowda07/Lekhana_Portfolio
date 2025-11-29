@@ -42,6 +42,19 @@ function downloadResume() {
     link.download = 'resume.pdf';
     link.click();
 }
+fetch("info.xml")
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "text/xml");
+
+    const developer = xml.getElementsByTagName("developer")[0].textContent;
+    const version = xml.getElementsByTagName("version")[0].textContent;
+
+    document.getElementById("devName").textContent = developer;
+    document.getElementById("portfolioVersion").textContent = version;
+  })
+  .catch(err => console.log("Error loading XML:", err));
 
 
 elements.forEach(el => observer.observe(el));
