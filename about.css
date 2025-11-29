@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0e0e0e;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: cyan;
+    font-size: 24px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    padding: 120px 20px;
+}
+
+.about-box {
+    width: 70%;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+
+    /* Fade + slide animation */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlide 1.3s ease forwards;
+}
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-box h1, .about-box h2 {
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.list {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}

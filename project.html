@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Lekhana</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0c0c0c;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            padding: 60px 10%;
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #00eaff;
+        }
+
+        .section-title {
+            font-size: 35px;
+            font-weight: 600;
+            margin-top: 40px;
+            color: #00eaff;
+        }
+
+        p.sub {
+            font-size: 18px;
+            opacity: .8;
+            margin-bottom: 40px;
+        }
+
+        /* Project Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 0 20px #00eaff;
+            transform: translateY(-10px);
+            border-color: #00eaff;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #00eaff;
+        }
+
+        .project-desc {
+            font-size: 16px;
+            opacity: .8;
+            margin-bottom: 20px;
+        }
+
+        .btn-group a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 18px;
+            background: #00eaff;
+            border-radius: 8px;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-group a:hover {
+            background: #028090;
+            box-shadow: 0 0 10px #00eaff;
+        }
+
+        /* Back button */
+        .back {
+            margin-top: 40px;
+            display: inline-block;
+            color: #00eaff;
+            text-decoration: none;
+            border: 1px solid #00eaff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #00eaff;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Projects</h1>
+        <p class="sub">Here are some of the projects I’ve built, categorized into hardware and software.</p>
+
+        <!-- Hardware Section -->
+        <h2 class="section-title">🔧 Hardware Projects</h2>
+        <div class="projects-grid">
+
+            <!-- Hardware 1 -->
+            <div class="project-card">
+                <div class="project-title">🔶 Plastic Bag Sealing Machine</div>
+                <div class="project-desc">
+                    A custom-built sealing machine designed using heating coils,
+                    aluminum base, and mechanical compression to seal plastic bags
+                    safely and efficiently.
+                </div>
+                <div class="btn-group">
+                    <a href="photos/pb.png" target="_blank">View Photo</a>
+                </div>
+            </div>
+
+            <!-- Hardware 2 -->
+            <div class="project-card">
+                <div class="project-title">🐾 Automatic Pet Feeder</div>
+                <div class="project-desc">
+                    An automated food dispenser using Arduino, servo motor, and RTC
+                    to schedule feeding times for pets. Includes LED indicators and 
+                    a manual override button.
+                </div>
+                <div class="btn-group">
+                    <a href="pet.mp4">View Video</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Software Section -->
+        <h2 class="section-title">💻 Software Projects</h2>
+        <div class="projects-grid">
+
+            <!-- Software 2 -->
+            <div class="project-card">
+                <div class="project-title">🌙 Portfolio Website</div>
+                <div class="project-desc">
+                    A clean, fully responsive personal portfolio with animations,
+                    dark theme UI and multi-page navigation.
+                </div>
+                <div class="btn-group">
+                    <a href="index.html">View Project</a>
+                </div>
+            </div>
+
+            <!-- Software 3 -->
+            <div class="project-card">
+                <div class="project-title">🔐 Phishing Detection Research</div>
+                <div class="project-desc">
+                    A research-based analytical project exploring phishing attacks,
+                    patterns, human behavior and multi-layered cyber security solutions.
+                </div>
+                <div class="btn-group">
+                    <a href="research.pdf" target="_blank">View Report</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Back button -->
+        <a href="index.html" class="back" target="blank">⟵ Back to Home</a>
+    </div>
+
+</body>
+</html>

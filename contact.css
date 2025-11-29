@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0e0e0e;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: cyan;
+    font-size: 24px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact-container {
+    padding: 120px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    color: cyan;
+    margin-bottom: 40px;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlide 1.3s ease forwards;
+}
+
+/* Contact Box */
+.contact-box {
+    background: #1a1a1a;
+    width: 70%;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlide 1.3s ease forwards;
+}
+
+.contact-box h2 {
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info p a {
+    color: cyan;
+    text-decoration: none;
+}
+
+.info p a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    background: #222;
+    color: white;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-form button {
+    background: cyan;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px cyan;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

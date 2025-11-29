@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekhana Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+    <nav>
+        <h2 class="logo">Lekhana</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="project.html">My Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="text">
+            <h1>Hi, I'm <span class="name">Lekhana</span><span class="hi-emoji">👋</span></h1>
+            <p>A passionate <span class="highlight">Engineer</span> and developer</p>
+
+            <button class="resume-btn" onclick="downloadResume()">Download Resume</button>
+        </div>
+
+        <div class="image">
+            <img src="photos/image.png" alt="Profile Photo">
+            <!-- Use your photo as profile.jpg -->
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="box">
+    <h2>About me</h2>
+
+        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ;"><b>I am Lekhana, a 2nd-year engineering student with interest in developmentand tech projects.</b></p><br/><br/>
+        <ul>
+            <li style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><a href="about.html"><b>Know more👉🏻</b></a></li>
+        </ul>
+        </section>
+
+    <!-- Studies -->
+    <section id="study" class="box">
+        <h2>Skills</h2>
+        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Currently pursuing Engineering in Computer Science.</b></p>
+        <br><br><ul>
+            <li style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><a href="skills.html"><b>Know more👉🏻</b></a></li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="box">
+        <h2>Contact Me</h2>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/lekhana-bs-522400295">LinkedIn</a>
+            <a href="lekhanabs2005@gmail.com">Gmail</a>
+            <a href="https://github.com/LekhanaGowda07">Git Hub</a>
+        </div>
+    </section>
+
+    <!-- Message Form -->
+<section id="contact" class="contact-section">
+  <h2>Send me a message</h2>
+  <p style="color:black; margin-top:10px;">Feel free to reach out for collaborations, projects, or hackathons!</p>
+
+  <form action="https://formspree.io/f/movywlvq" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

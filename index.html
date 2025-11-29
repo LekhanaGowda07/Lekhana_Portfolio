@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lekhana Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 22%;
+      background: #111;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebar h2 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+      color: cyan;
+    }
+    .nav-links {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      font-size: 20px;
+    }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      color: cyan;
+      transform: translateX(5px);
+    }
+
+    .app-logo {
+      font-size: 18px;
+      opacity: 0.7;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .hi-text {
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hi-text span.emoji {
+      animation: wave 1.2s infinite;
+      font-size: 42px;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(15deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .intro {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .intro .role {
+      color: cyan;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+    }
+    .btn {
+      padding: 10px 22px;
+      border: 2px solid cyan;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+    .btn:hover {
+      background: cyan;
+      color: #000;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .arrow {
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 40px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Sidebar -->
+  <div class="sidebar">
+    <h2>Lekhana</h2>
+
+    <div class="nav-links">
+      <a href="about.html">About</a><br>
+      <a href="skills.html">My Skills</a><br>
+      <a href="project.html">My Projects</a><br>
+      <a href="contact.html">Contact</a><br>
+    </div>
+
+    <div class="app-logo">🌙 Portfolio</div>
+  </div>
+
+  <!-- Main Hero Section -->
+  <div class="main">
+    <div class="hi-text">Hi <span class="emoji">👋</span></div>
+
+    <div class="intro">I'm <span class="name">Lekhana</span>, <span class="role">CSE Engineer</span></div>
+
+    <div class="buttons">
+      <div class="btn" onclick="openSecondPage1()">Contact Me</div>
+      <div class="btn" onclick="openSecondPage()">Know About Me</div>
+    </div>
+
+    <div class="arrow" onclick="openSecondPage()">⬇️</div>
+  </div>
+
+<script>
+  function openSecondPage() {
+    window.location.href = "hello.html";
+  }
+  function openSecondPage1() {
+    window.location.href = "contact.html";
+  }
+</script>
+
+</body>
+</html

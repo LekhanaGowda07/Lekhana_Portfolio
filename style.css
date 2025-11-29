@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0e0e0e;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav h2 {
+    font-size: 24px;
+    color: cyan;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero .text h1 {
+    font-size: 45px;
+}
+
+.highlight {
+    color: cyan;
+}
+
+.resume-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: cyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid rgb(239, 225, 227);
+}
+
+/* Sections */
+.box {
+    padding: 50px;
+    margin: 40px auto;
+    width: 80%;
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+.socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.socials a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: #222;
+    color: cyan;
+    border: 2px solid cyan;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.socials a:hover {
+    background: cyan;
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px cyan;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background: #ffe6f2;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  color: #d63384;
+}
+
+.contact-form {
+  margin-top: 20px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ffb3d9;
+  background: white;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #ff66b2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ff3385;
+}
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* --- Anime Hover Effect for .box sections --- */
+
+.box {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Text pop-up effect */
+.box h2,
+.box p {
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px #ff77c4, 0 0 50px #ffb5e8;
+}
+
+/* Text pops up */
+.box:hover h2,
+.box:hover p {
+    transform: translateY(-6px);
+    opacity: 1;
+}
+
+/* Anime Glow Border */
+.box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 12px;
+    background: linear-gradient(120deg, rgb(155, 231, 231), #ffa6d1, rgb(123, 134, 134));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Show glow on hover */
+.box:hover::before {
+    opacity: 1;
+}
+
+
+/* --- Floating sparkles on hover --- */
+.box:hover::after {
+    content: "✧ ✦ ✧";
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 20px;
+    color:aqua;
+    animation: sparkle 1.5s ease infinite;
+    opacity: 0.8;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+    0% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-8px) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Hi emoji — continuous waving animation */
+.hi-emoji {
+    display: inline-block;
+    font-size: 32px;
+    margin-left: 10px;
+    animation: wave 1.6s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-15deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+.resume-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: cyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s ease;
+    box-shadow: 0 0 0px cyan;
+}
+
+/* Glow when hovered */
+.resume-btn:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan;
+    transform: translateY(-3px);
+}
